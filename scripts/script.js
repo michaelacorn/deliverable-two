@@ -16,13 +16,13 @@ if (vacationType == "Musical") {
 var travelType 
 
 var groupSize = prompt("How many will be traveling with you? 1-2, 3-5, 6+");
-if (groupSize == "1-2") {
+if((groupSize >= 1) && (groupSize <= 2)) {
   travelType = "First Class Travel"
   alert ("Just the two of you, eh? Here's what we suggest...");
-} else if (groupSize == "3-5") {
+} else if ((groupSize >= 3) && (groupSize <= 5)) {
   travelType = "Helicopter"
   alert ("If two's a crowd, then three is a party! Let's see what works best for your group...");
-} else if (groupSize == "6+") {
+} else if (groupSize >= 6) {
   travelType = "Charter Flight"
   alert ("Whoa! That's a lot. We can work with that...");
 } else {
@@ -34,4 +34,3 @@ var result
 if (vacationType && groupSize) {
   alert("Based on you wanting something " + vacationType + " and having a group of " + groupSize + " we suggest " + travelType +  " to " + destination + "! Safe travels. :)")
 }
-
